@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using System;
+using System.IO;
 
 namespace JenkinsDotNetCore.Test
 {
