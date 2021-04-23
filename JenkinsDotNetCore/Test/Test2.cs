@@ -18,6 +18,7 @@ namespace JenkinsDotNetCore.Test
         {
             driver.Navigate().GoToUrl("https://rahulshettyacademy.com/seleniumPractise/#/");
             ReportLog("Navigated to Greenkart");
+            Console.WriteLine(Environment.Directory);
             Assert.Fail();
         }
     }
