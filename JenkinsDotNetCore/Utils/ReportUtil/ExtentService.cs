@@ -18,8 +18,8 @@ namespace JenkinsDotNetCore.Utils.ReportUtil
             {
                 Directory.CreateDirectory(reportDir);
             }
-            string path = reportDir + "\\" + "index.html";
-            var reporter = new ExtentHtmlReporter(path);
+            var path = Path.Combine(reportDir, "index.html");
+            var reporter = new ExtentHtmlReporter(Path.GetFullPath(path));
             reporter.Config.DocumentTitle = "JCMS Framework Report";
             reporter.Config.ReportName = "Test Execution Report";
             reporter.Config.Encoding = "UTF-8";
