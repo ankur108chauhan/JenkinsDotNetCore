@@ -94,7 +94,7 @@ namespace JenkinsDotNetCore.Test
             }
             Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
             string title = screenShotName + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
-            string path = screenshotDirectory + "\\" + title.Replace("(\"", "_").Replace("\")", "_") + ".png";
+            string path = Path.Combine(screenshotDirectory, title.Replace("(\"", "_").Replace("\")", "_") + ".png");
             screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
             return path;
         }
