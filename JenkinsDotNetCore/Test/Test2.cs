@@ -9,8 +9,8 @@ namespace JenkinsDotNetCore.Test
         [Test]
         public void TestCase1()
         {
-            driver.Navigate().GoToUrl("https://www.msnagile.com/");
-            ReportLog("Navigated to MsnAgile");
+            driver.Navigate().GoToUrl("https://www.instagram.com/");
+            ReportLog("Navigated to Instagram");
         }
 
         [Test]
@@ -18,6 +18,7 @@ namespace JenkinsDotNetCore.Test
         {
             driver.Navigate().GoToUrl("https://rahulshettyacademy.com/seleniumPractise/#/");
             ReportLog("Navigated to Greenkart");
+            Assert.Fail();
         }
     }
 }
