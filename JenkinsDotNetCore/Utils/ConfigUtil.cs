@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.IO;
+using System;
 
 namespace JenkinsDotNetCore.Utils
 {
@@ -29,7 +30,7 @@ namespace JenkinsDotNetCore.Utils
 
         public static string GetProjectRootDirectory()
         {
-            string currentDirectory = Directory.GetCurrentDirectory();
+            string currentDirectory = Environment.CurrentDirectory;
             return currentDirectory.Split("bin")[0];
         }
     }
