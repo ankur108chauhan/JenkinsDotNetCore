@@ -59,7 +59,7 @@ namespace JenkinsDotNetCore.Test
                         ExtentTestManager.GetTest().Log(logstatus, errorMessage);
                         ExtentTestManager.GetTest().Log(logstatus, stackTrace);
                         ExtentTestManager.GetTest().Log(logstatus, "Screenshot");
-                        ExtentTestManager.GetTest().AddScreenCaptureFromPath(screenShotPath);
+                        ExtentTestManager.GetTest().AddScreenCaptureFromPath(Path.GetFullPath(screenShotPath));
                         break;
 
                     case TestStatus.Skipped:
